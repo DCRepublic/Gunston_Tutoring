@@ -2,18 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import HomeMobile from '../views/HomeMobile.vue'
-import Start from '../views/Start.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Root',
-    component: Start
- },
-  {
-    path:'/Main',
+    path:'/',
     name: 'Main',
     component: Home,
     meta: {

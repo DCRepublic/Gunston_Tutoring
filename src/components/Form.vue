@@ -434,7 +434,7 @@ const creds = require('../../client_secret.json');
        time: [],
        other_choice: '',
        
-       tags: ['I will show up to all meetings that I request or I will notify the tutor at least 12 hours before the start of the tutoring session', 'I will bring materials to the session to work on or discuss with the tutor', 'I will provide the student tutor with the subject that I wish to work on during the session at least 3 days in advance to allow the tutor to prepare for the session', 'I will use requested meetings for the sole purpose of tutoring', 'I will not ask the student tutor do do anything academically dishonest'],
+       tags: ['I will show up to all meetings that I request or I will notify the tutor at least 12 hours before the start of the tutoring session', 'I will bring materials to the session to work on or discuss with the tutor', 'I will provide the student tutor with the subject that I wish to work on during the session at least 3 days in advance to allow the tutor to prepare for the session', 'I will use requested meetings for the sole purpose of tutoring', 'I will not ask the student tutor to do anything academically dishonest'],
       
 
       nameRules: [
@@ -464,6 +464,7 @@ const creds = require('../../client_secret.json');
     created (){
         console.log(this.elective)
         
+        
     },
     methods: {
       validate () {
@@ -473,7 +474,7 @@ const creds = require('../../client_secret.json');
             alert("Thank you! Your Response has been submitted")
         }else{
           alert("Please fill in all of the required fields")
-          console.log(String(Date()))
+         
         }
         
 
@@ -495,7 +496,7 @@ const creds = require('../../client_secret.json');
             subjects: String(this.selected) + " " + String(this.elective_choice),
             courses: this.courses,
             assistancetype: String(this.help_type) + " " + String(this.other_choice),
-            meetingtime: String(this.time) 
+            meetingtime: String(this.time)  
           }
           await sheet.addRow(row);
           console.log("added data")

@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/Gunston-Tutoring',
+  publicPath: '/Gunston_Tutoring',
   
   transpileDependencies: [ 'vuetify' ],
 }
