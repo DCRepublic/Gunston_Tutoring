@@ -495,7 +495,7 @@ const creds = require('../../client_secret.json');
             subjects: String(this.selected) + " " + String(this.elective_choice),
             courses: this.courses,
             assistancetype: String(this.help_type) + " " + String(this.other_choice),
-            meetingtime: String(this.time)
+            meetingtime: String(this.time) 
           }
           await sheet.addRow(row);
           console.log("added data")
