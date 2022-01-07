@@ -197,7 +197,14 @@
 
 
       </v-col>
+
     </v-row>
+
+    <!-- Weekday Selection-->
+
+
+    
+
 
 
 
@@ -209,7 +216,61 @@
      <h3 style="margin-top:5%;" class="text-center" >Please choose the times that you have free time during the next two weeks.</h3>
      <v-divider>
     </v-divider>
-    <v-row no-gutters justify="center">
+
+    
+    <v-row no-gutters justify="center" requierd>
+      
+      <v-col > 
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Monday"
+          value="Monday"
+        ></v-checkbox>
+       
+
+      </v-col>
+
+      <v-col>
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Tuesday"
+          value="Tuesday"
+        ></v-checkbox>
+       
+      </v-col>
+
+      <v-col>
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Wednesday"
+          value="Wednesday"
+        ></v-checkbox>
+       
+      </v-col>
+
+      <v-col >
+          
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Thursday"
+          value="Thursday"
+        ></v-checkbox>
+
+      </v-col>
+
+      <v-col>
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Friday"
+          value="Friday"
+        ></v-checkbox>
+
+      </v-col>
+    </v-row>
+    <v-divider>
+    </v-divider>
+
+    <v-row no-gutters justify="center" requierd>
       
       <v-col > 
         <v-checkbox
@@ -304,7 +365,7 @@
         <v-checkbox
         v-model="checkbox"
         :rules="[v => !!v || 'You must agree to continue!']"
-        label="Do you agree "
+        label="Please agree to Terms and Conditions"
         required
         >  </v-checkbox>
    
@@ -433,6 +494,7 @@ const creds = require('../../client_secret.json');
        dialog: false,
        time: [],
        other_choice: '',
+       day_of_the_week: [],
        
        tags: ['I will show up to all meetings that I request or I will notify the tutor at least 12 hours before the start of the tutoring session', 'I will bring materials to the session to work on or discuss with the tutor', 'I will provide the student tutor with the subject that I wish to work on during the session at least 3 days in advance to allow the tutor to prepare for the session', 'I will use requested meetings for the sole purpose of tutoring', 'I will not ask the student tutor to do anything academically dishonest'],
       
@@ -496,7 +558,8 @@ const creds = require('../../client_secret.json');
             subjects: String(this.selected) + " " + String(this.elective_choice),
             courses: this.courses,
             assistancetype: String(this.help_type) + " " + String(this.other_choice),
-            meetingtime: String(this.time)  
+            meetingtime: String(this.time), 
+            day_of_the_week: String(this.day_of_the_week), 
           }
           await sheet.addRow(row);
           console.log("added data")
