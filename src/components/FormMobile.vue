@@ -118,7 +118,7 @@
         <v-checkbox
           v-model="selected"
           @click="Elective"
-          label="Electvie"
+          label="Elective"
           value="Elective"
         ></v-checkbox>
        

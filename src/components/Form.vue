@@ -116,7 +116,7 @@
         <v-checkbox
           v-model="selected"
           @click="Elective"
-          label="Electvie"
+          label="Elective"
           value="Elective"
         ></v-checkbox>
        
@@ -162,7 +162,7 @@
         ></v-checkbox>
         <v-checkbox
           v-model="help_type"
-          label="Interactive problem practice: The tutor gives you problems to work through helping if needed"
+          label="Interactive problem practice: The tutor gives you problems to work through, helping if needed"
           value="Interactive"
         ></v-checkbox>
         
