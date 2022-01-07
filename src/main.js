@@ -5,7 +5,9 @@ import store from './store'
 import { Datetime } from 'vue-datetime'
 import Vuex from 'vuex'
 
+
 Vue.use(Vuex)
+
 
 // You need a specific loader for CSS files
 import 'vue-datetime/dist/vue-datetime.css'

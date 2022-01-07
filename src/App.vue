@@ -9,8 +9,11 @@
     >
     
       
-      <div class=header id="header">
+      <div v-if="!this.isMobile" class=header id="header">
         <h1> Gunston Tutoring Service</h1>
+      </div>
+      <div v-else class=header-mobile id="header-mobile">
+        <h2> Gunston Tutoring Service</h2>
       </div>
 
       <!--
@@ -32,17 +35,21 @@
 </template>
 
 <script>
+const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
 
 export default {
   name: 'App',
   components: {
+    
     
        
     },
     
 
   data: () => ({
-    color: '#D2E1E6'
+    color: '#D2E1E6',
+    isMobile: window.matchMedia("only screen and (max-width: 760px)").matches,
     
    
 
@@ -55,6 +62,7 @@ export default {
 
 
 
+
 <style>
 
 
@@ -64,9 +72,12 @@ export default {
   padding: 30px;
 }
 
-
-
 .header{
+  margin-right:auto;
+  margin-left: 2%;
+}
+
+.header-mobile{
   margin-right:auto;
   margin-left: 2%;
 }

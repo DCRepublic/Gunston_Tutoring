@@ -10,17 +10,13 @@ const routes = [
     path:'/',
     name: 'Main',
     component: Home,
-    meta: {
-      desktop: true
-    }
+    
   },
   {
     path:'/MainMobile',
     name: 'MainMobile',
     component: HomeMobile,
-    meta: {
-      mobile: true
-    }
+    
   },
  
 ]
@@ -32,6 +28,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+
 
 
 export default router

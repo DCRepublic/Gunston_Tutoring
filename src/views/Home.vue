@@ -1,5 +1,7 @@
 <template>
+
 <v-container class="box">
+  
 
 
 
@@ -15,6 +17,8 @@
 <script>
 import Form from "../components/Form"
 
+
+const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
   
   export default {
@@ -46,9 +50,19 @@ import Form from "../components/Form"
       ],
       checkbox: false,
     }),
-   
+
+    created(){
+        if (isMobile) {
+        this.$router.push("/MainMobile")
+        
+      }
+      },
+     
+      
     
     methods: {
+     
+      
 
       
       

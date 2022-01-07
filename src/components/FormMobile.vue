@@ -62,7 +62,7 @@
 <!-- Class Checkboxes-->
 
 
-    <h3 style="margin-top:5%;" class="text-center" >Which subject(s) would you like help with?</h3>
+    <h4 style="margin-top:20%;" class="text-center " >Which subject(s) would you like help with?</h4>
      <v-divider>
     </v-divider>
     <v-row no-gutters justify="center">
@@ -70,11 +70,13 @@
       <v-col >
         
         <v-checkbox
+          class="my-checkbox"
           v-model="selected"
           label="Math"
           value="Math"
         ></v-checkbox>
         <v-checkbox
+          class="my-checkbox"
           v-model="selected"
           label="English"
           value="English"
@@ -148,7 +150,7 @@
       </v-col>
     </v-row>
 
-   <h3 style="margin-top:5%;" class="text-center" >Please choose what type of assistance you would like (choose all that apply)</h3>
+   <h4 style="margin-top:15%;" class="text-center" >Please choose what type of assistance you would like (choose all that apply)</h4>
      <v-divider>
     </v-divider>
     <v-row no-gutters >
@@ -184,7 +186,14 @@
           value="Other"
         ></v-checkbox>
        
-        <v-text-field
+       
+       
+
+
+      </v-col>
+      
+
+         <v-text-field
             
             v-show="this.other"
             v-model="other_choice"
@@ -193,10 +202,8 @@
             label="Other"
 
           ></v-text-field>
-       
 
-
-      </v-col>
+   
 
     </v-row>
 
@@ -213,7 +220,7 @@
     <!-- Class Times-->
 
 
-     <h3 style="margin-top:5%;" class="text-center" >Please choose the times that you have free time during the next two weeks.</h3>
+     <h4 style="margin-top:15%;" class="text-center" >Please choose the times that you have free time during the next two weeks.</h4>
      <v-divider>
     </v-divider>
 
@@ -228,18 +235,7 @@
         ></v-checkbox>
        
 
-      </v-col>
-
-      <v-col>
-        <v-checkbox
-          v-model="day_of_the_week"
-          label="Tuesday"
-          value="Tuesday"
-        ></v-checkbox>
-       
-      </v-col>
-
-      <v-col>
+    
         <v-checkbox
           v-model="day_of_the_week"
           label="Wednesday"
@@ -248,7 +244,14 @@
        
       </v-col>
 
-      <v-col >
+      <v-col>
+       
+        <v-checkbox
+          v-model="day_of_the_week"
+          label="Tuesday"
+          value="Tuesday"
+        ></v-checkbox>
+      
           
         <v-checkbox
           v-model="day_of_the_week"
@@ -284,22 +287,22 @@
           value="Class 1"
         ></v-checkbox>
 
-      </v-col>
-
-      <v-col>
+      
         <v-checkbox
           v-model="time"
           label="Class 2"
           value="Class 2"
         ></v-checkbox>
+
+        
+      </v-col>
+
+      <v-col>
         <v-checkbox
           v-model="time"
           label="Class 3"
           value="Class 3"
         ></v-checkbox>
-      </v-col>
-
-      <v-col>
         <v-checkbox
           v-model="time"
           label="Class 4"
@@ -327,22 +330,20 @@
           value="Class 7"
         ></v-checkbox>
 
-      </v-col>
-
-      <v-col>
         <v-checkbox
           v-model="time"
           label="GEx"
           value="GEx"
         ></v-checkbox>
-        <v-checkbox
+        
+
+
+      </v-col>
+      <v-checkbox
           v-model="time"
           label="After school (2:30-4:15)"
           value="After school"
         ></v-checkbox>
-
-
-      </v-col>
     </v-row>
 
 
@@ -350,7 +351,7 @@
 
 
 
-     <p style="margin-top:5%;" class="text-center" ></p>
+     <p style="margin-top:15%;" class="text-center" ></p>
 
 
 
@@ -378,6 +379,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
+          style="margin-bottom: 15%;"
             color="blue lighten-2"
             dark
             v-bind="attrs"
@@ -440,10 +442,9 @@
 
     </v-layout>
 
-    <v-row >
-
+  <v-container class="submit">
+  
     <v-btn
-      
       color="success"
       class="mr-4"
       @click="validate"
@@ -452,15 +453,16 @@
     </v-btn>
 
     <v-btn
+    
       color="error"
       class="mr-4"
       @click="reset"
     >
       Reset Form
     </v-btn>
-
-
-    </v-row>
+  </v-container>
+  
+  
   </v-form>
 
 
@@ -474,7 +476,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 const creds = require('../../client_secret.json');
   
   export default {
-    name: 'Form',
+    name: 'FormMobile',
 
     components: {
      
@@ -605,5 +607,18 @@ const creds = require('../../client_secret.json');
   margin: auto;
   padding: 30px;
   
+
+}
+.v-input--checkbox::v-deep  .v-label, .v-icon{
+   
+    font-size: 13px;
+  
+}
+.list{
+  font-size: 12px;
+}
+.submit{
+  display:flex;
+  justify-content:center;
 }
 </style>
