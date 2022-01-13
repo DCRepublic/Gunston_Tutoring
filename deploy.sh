@@ -17,10 +17,10 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+#git push -f git@github.com:Gunston-Tutoring/Gunston-Tutoring.git master:gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:DCRepublic/Gunston_Tutoring.git master:gh-pages
+git push -f git@github.com:Gunston-Tutoring/Gunston_Tutoring.git master:gh-pages
 
 
 cd -

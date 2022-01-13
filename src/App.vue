@@ -16,12 +16,12 @@
         <h2> Gunston Tutoring Service</h2>
       </div>
 
-      <!--
+      
       <div class=nav id="nav">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/Rating">Rating</router-link>
       </div>
-      -->
+
    
 
     </v-app-bar>
