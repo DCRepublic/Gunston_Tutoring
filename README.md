@@ -8,9 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  
 
   <h3 align="center">Gunston Tutoring Dashboard</h3>
 
@@ -22,16 +20,15 @@
 
 
 
+<div align="center">
 
-### Built With
+### Built With Vue.js
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Vue.js](https://vuejs.org/)
-
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" width="100" height="100" /> 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+</div>
 
 
 <!-- GETTING STARTED -->
@@ -39,9 +36,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 Clone the repo and run the below commands
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
