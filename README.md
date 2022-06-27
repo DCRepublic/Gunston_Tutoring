@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   
-
+  
   <h3 align="center">Gunston Tutoring Dashboard</h3>
 
   <p align="center">
@@ -44,6 +44,8 @@ Clone the repo and run the below commands
   npm run serve
   ```
 
+## Images
+![Logo Image](Image.png)
 
 
 
